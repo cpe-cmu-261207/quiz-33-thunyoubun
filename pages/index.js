@@ -14,7 +14,11 @@ export default function Home() {
         className="mx-auto p-3 rounded rounded-3 shadow-sm"
       >
         {/* PostOwner Example*/}
-        <PostOwner name="Thun Anuntart" id="620610589" />
+        <PostOwner
+          img="profileImages/profile.jpg"
+          name="Thun Anuntart"
+          id="620610589"
+        />
 
         {/* Comment Example */}
         <div>

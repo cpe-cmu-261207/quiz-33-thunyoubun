@@ -4,7 +4,6 @@ import Reply from "./Reply";
 export default function Comment(props) {
   const [like, setLike] = useState(props.likeNum);
   const [havelike, sethavelike] = useState(false);
-  const comments = [props.comments];
 
   const handleClick = () => {
     setLike(like++);
