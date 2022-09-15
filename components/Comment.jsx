@@ -18,7 +18,6 @@ export default function Comment(props) {
   return (
     <div>
       {/* Entire Comment div */}
-
       <div className="d-flex gap-2 my-2">
         <img
           src={props.img}
@@ -52,16 +51,17 @@ export default function Comment(props) {
           </button>
         </div>
       </div>
-
-      {props.replies.map((x, i) => {
-        <Reply
-          key={i}
-          username={x.username}
-          img={x.userImagePath}
-          replyText={x.replyText}
-          likeNum={x.likeNum}
-        />;
-      })}
+      <div>
+        {props.replies.map((x, i) => {
+          <Reply
+            key={i}
+            username={x.username}
+            img={x.userImagePath}
+            replyText={x.replyText}
+            likeNum={x.likeNum}
+          />;
+        })}
+      </div>
     </div>
   );
 }
