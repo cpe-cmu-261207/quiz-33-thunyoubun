@@ -7,6 +7,11 @@ export default function Comment(props) {
 
   const handleClick = () => {
     setLike(like++);
+    if (like > 0) {
+      sethavelike(true);
+    } else {
+      sethavelike(false);
+    }
   };
 
   useEffect(() => {

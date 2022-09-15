@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function Reply(props) {
   const [like, setLike] = useState(props.likeNum);
@@ -6,6 +6,11 @@ export default function Reply(props) {
 
   const handleClick = () => {
     setLike(like++);
+    if (like > 0) {
+      sethavelike(true);
+    } else {
+      sethavelike(false);
+    }
   };
 
   useEffect(() => {
