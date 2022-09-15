@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function Reply(props) {
-  const [like, setLike] = useState(0);
+  const [like, setLike] = useState(props.likeNum);
   const [havelike, sethavelike] = useState(false);
 
   const handleClick = () => {

@@ -25,16 +25,18 @@ export default function Home() {
         <PostOwner name="Thun Anuntart" id="620610589" />
 
         {/* Comment Example */}
-        {comments.map((x, i) => {
-          <Comment
-            key={i}
-            username={x.username}
-            img={x.userImagePath}
-            comment={x.commentText}
-            replies={x.replies}
-            likeNum={x.likeNum}
-          />;
-        })}
+        <div>
+          {comments.map((x, i) => {
+            <Comment
+              key={i}
+              username={x.username}
+              img={x.userImagePath}
+              comment={x.commentText}
+              replies={x.replies}
+              likeNum={x.likeNum}
+            />;
+          })}
+        </div>
 
         {/* Reply Example */}
       </div>
