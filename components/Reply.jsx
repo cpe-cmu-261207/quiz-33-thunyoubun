@@ -39,20 +39,17 @@ export default function Reply(props) {
           </span>
           <br />
           <span style={{ color: "#E4E6EB" }}>{props.replyText}</span>
-          <button
-            onClick={handleClick}
-            className="d-flex align-items-center gap-1"
-            style={{ backgroundColor: "transparent", border: "none" }}
-          >
-            <img src="/like.svg" width={20}></img>
-
-            <span
-              className={havelike ? "d-block" : "d-none"}
-              style={{ color: "#B0B3B8" }}
+          <div className={havelike ? "d-block" : "d-none"}>
+            <button
+              onClick={handleClick}
+              className="d-flex align-items-center gap-1"
+              style={{ backgroundColor: "transparent", border: "none" }}
             >
-              {like} คน
-            </span>
-          </button>
+              <img src="/like.svg" width={20}></img>
+
+              <span style={{ color: "#B0B3B8" }}>{like} คน</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
