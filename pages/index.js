@@ -21,8 +21,9 @@ export default function Home() {
         />
 
         {/* Comment Example */}
+
         <div>
-          {comments.map((x, i) => {
+          {comments.map((x, i) => (
             <Comment
               key={i}
               username={x.username}
@@ -30,8 +31,8 @@ export default function Home() {
               comment={x.commentText}
               replies={x.replies}
               likeNum={x.likeNum}
-            />;
-          })}
+            />
+          ))}
         </div>
 
         {/* Reply Example */}

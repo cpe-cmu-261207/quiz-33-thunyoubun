@@ -51,15 +51,15 @@ export default function Comment(props) {
         </div>
       </div>
       <div>
-        {props.replies.map((x, i) => {
+        {props.replies.map((x, i) => (
           <Reply
             key={i}
             username={x.username}
             img={x.userImagePath}
             replyText={x.replyText}
             likeNum={x.likeNum}
-          />;
-        })}
+          />
+        ))}
       </div>
     </div>
   );
