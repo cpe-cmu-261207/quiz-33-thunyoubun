@@ -3,14 +3,6 @@ import PostOwner from "../components/PostOwner";
 import { comments } from "../libs/comments";
 
 export default function Home() {
-  comments.map((x, i) => {
-    x.commentText;
-    x.likeNum;
-    x.replies;
-    x.userImagePath;
-    x.username;
-  });
-
   return (
     <div
       style={{ minHeight: "100vh", backgroundColor: "#18191A" }}
