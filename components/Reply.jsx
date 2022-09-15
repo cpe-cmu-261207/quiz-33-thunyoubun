@@ -6,12 +6,15 @@ export default function Reply(props) {
 
   const handleClick = () => {
     setLike(like++);
+  };
+
+  useEffect(() => {
     if (like > 0) {
       sethavelike(true);
     } else {
       sethavelike(false);
     }
-  };
+  });
   return (
     <div>
       <div className="d-flex gap-2 my-2 ps-5">

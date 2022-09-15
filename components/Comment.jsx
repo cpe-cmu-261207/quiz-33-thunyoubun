@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Reply from "./Reply";
 
 export default function Comment(props) {
@@ -7,12 +7,15 @@ export default function Comment(props) {
 
   const handleClick = () => {
     setLike(like++);
+  };
+
+  useEffect(() => {
     if (like > 0) {
       sethavelike(true);
     } else {
       sethavelike(false);
     }
-  };
+  });
 
   return (
     <div>
